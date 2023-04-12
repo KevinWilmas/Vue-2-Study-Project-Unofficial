@@ -1,34 +1,10 @@
 <template>
-  <!-- template code -->
+  <!-- your template code -->
 </template>
 <script>
 export default {
-  name: "App",
-  props: {
-    /*...*/
-  }
-  components: {
-    /*...*/
-  },
-  data(){
-    return {
-      /*...*/
-    }
-  },
-  computed:{
-    /*...*/
-  },
-  watch:{
-    /*...*/
-  },
-  methods: {
-    /*...*/
-  },
-  created(){
-    /*...*/
-  },
-  mounted(){
-    /*...*/
+  setup() {
+    // more code to write
   }
 };
 </script>

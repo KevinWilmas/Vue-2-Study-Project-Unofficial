@@ -3,16 +3,18 @@ export default {
   props: {
     title: String,
   },
-  data() {
-    return {
+  setup() {
+    const state = reactive({
       username: "",
       password: "",
-    };
-  },
-  methods: {
-    login() {
+    });
+    const login = () => {
       // login method
-    },
+    };
+    return {
+      login,
+      state,
+    };
   },
 };
 </script>

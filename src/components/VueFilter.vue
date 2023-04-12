@@ -1,9 +1,17 @@
 <script>
-Vue.filter("uppercase", function(string) {
+uppercase(string) {
   return string.toUpperCase();
-});
-</script>
+}
 
+export { uppercase };
+</script>
+<script>
+import { uppercase } from "@/filters/strings";
+
+app.config.globalProperties.$filters = {
+  uppercase: uppercase
+};
+</script>
 
 
 

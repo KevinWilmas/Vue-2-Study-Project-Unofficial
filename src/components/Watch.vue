@@ -5,16 +5,14 @@
 </template>
 
 <script>
+import { ref, watchEffect } from "vue";
 export default {
-  data(){
-    return {
-      name: null,
-    }
-  },
-  watch: {
-    name(newVal, oldVal){
-      console.log(`${newVal} ${oldVal}`);
-    }
+  setup() {
+    const name = ref('');
+    watchEffect(() => {
+      console.log(name.value);
+    })
+    return { name };
   }
 };
 </script>

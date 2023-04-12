@@ -1,21 +1,15 @@
 <script>
+import { reactive, onMounted } from "vue";
 export default {
   props: {
     title: String,
   },
-  data() {
-    return {
-      username: "",
-      password: "",
-    };
-  },
-  mounted() {
-    console.log("component mounted");
-  },
-  methods: {
-    login() {
-      // login method
-    },
+  setup() {
+    // ..
+    onMounted(() => {
+      console.log("component mounted");
+    });
+    // ...
   },
 };
 </script>

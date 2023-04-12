@@ -4,16 +4,14 @@
   </div>
 </template>
 <script>
+import { ref, computed } from "vue";
 export default {
-  data(){
-    return {
-      name: "author",
-    }
-  },
-  computed: {
-    upperName(){
-      return this.name.toUpperCase() + "VUE_3";
-    }
+  setup() {
+    const name = ref("author");
+    const upperName = computed(() => {
+      return name.value.toUpperCase() + "VUE_3";
+    });
+    return { name, upperName };
   }
 };
 </script>

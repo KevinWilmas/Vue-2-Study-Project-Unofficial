@@ -1,7 +1,11 @@
 <script>
 export default {
-  mounted() {
-    console.log("title: " + this.title);
+  setup(props) {
+    // ...
+    onMounted(() => {
+      console.log("title: " + props.title);
+    });
+    // ...
   },
 };
 </script>

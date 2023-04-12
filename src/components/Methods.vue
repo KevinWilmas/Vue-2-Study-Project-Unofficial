@@ -6,16 +6,14 @@
 </template>
 
 <script>
+import { ref } from "vue";
 export default {
-  data(){
-    return {
-      amount: 3,
+  setup() {
+    const amount = ref(3);
+    function increaseAmount() {
+      amount.value+=1
     }
-  },
-  methods: {
-    increaseAmount() {
-      this.amount+=1
-    }
+    return { amount, increaseAmount };
   }
 };
 </script>

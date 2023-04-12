@@ -1,13 +1,15 @@
 <script>
+import { reactive } from "vue";
 export default {
   props: {
     title: String,
   },
-  data() {
-    return {
+  setup() {
+    const state = reactive({
       username: "",
       password: "",
-    };
+    });
+    return { state };
   },
 };
 </script>
