@@ -1,17 +1,19 @@
 <template>
-    <div id="app">
-      <p>Upper: {{ upperName }} out of {{ name }}</p>
-    </div>
-  </template>
-  <script>
-  import { ref, computed } from "vue";
-  export default {
-    setup() {
-      const name = ref("author");
-      const upperName = computed(() => {
-        return name.value.toUpperCase() + "VUE_3";
-      });
-      return { name, upperName };
+  <div id="app">
+    <p>Upper: {{ upperName }} out of {{ name }}</p>
+  </div>
+</template>
+<script>
+export default {
+  data(){
+    return {
+      name: "author",
     }
-  };
-  </script>
+  },
+  computed: {
+    upperName(){
+      return this.name.toUpperCase() + "VUE_3";
+    }
+  }
+};
+</script>

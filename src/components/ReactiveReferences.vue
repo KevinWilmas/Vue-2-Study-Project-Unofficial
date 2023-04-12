@@ -1,13 +1,16 @@
-
 <template>
+  <div id="app">
     <div>Name: {{ name }}</div>
-  </template>
-  <script>
-  import { ref } from "vue";
-  export default {
-    setup() {
-      const name = ref('Name');
-      return { name };
+  </div>
+</template>
+
+<script>
+export default {
+  name: "App",
+  data(){
+    return {
+      name: "Name"
     }
-  };
-  </script>
+  }
+};
+</script>

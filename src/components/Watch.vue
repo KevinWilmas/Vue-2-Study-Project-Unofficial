@@ -1,18 +1,20 @@
 <template>
-    <div>
-      <input type="text" v-model="name" />
-    </div>
-  </template>
-  
-  <script>
-  import { ref, watchEffect } from "vue";
-  export default {
-    setup() {
-      const name = ref('');
-      watchEffect(() => {
-        console.log(name.value);
-      })
-      return { name };
+  <div>
+    <input type="text" v-model="name" />
+  </div>
+</template>
+
+<script>
+export default {
+  data(){
+    return {
+      name: null,
     }
-  };
-  </script>
+  },
+  watch: {
+    name(newVal, oldVal){
+      console.log(`${newVal} ${oldVal}`);
+    }
+  }
+};
+</script>

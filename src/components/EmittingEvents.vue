@@ -1,14 +1,12 @@
 <script>
 export default {
-  setup(props, { emit }) {
-    // ...
-    const login = () => {
-      emit("login", {
-        username: state.username,
-        password: state.password,
+  methods: {
+    login() {
+      this.$emit("login", {
+        username: this.username,
+        password: this.password,
       });
-    };
-    // ...
+    },
   },
 };
 </script>
